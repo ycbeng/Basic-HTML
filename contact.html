@@ -3,102 +3,49 @@
 	<title>My HTML Lesson</title>
 	<meta charset="utf-8">	
 	<style>
-	body{
-		background-color:skyblue;
+	body{		
+        background-image: url(images/bg.jpg);        
 		margin: 0;
 	}
 
-	ul.topnav {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		background-color: #333;
-	}
-
-	ul.topnav li {float: left;}
-	ul.topnav li a:hover{background-color:darkslateblue;}
-	ul.topnav li a {
-		display: block;
-		color: white;
-		text-align: center;
-		padding: 14px 16px;
-		text-decoration: none;
-	}
-
-	.contact{
-        width: 46%;
-        float: left;
-        height: 450px;
-        padding-left: 3%;
-        padding-top: 3%;
-    }
-
-    .contact input[type="text"],input[type="email"],input[type="tel"],select{
-        padding: 8px;
-        font-size: 1.1em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-      
-        
-    }
-
-    .contact input[type="submit"]{
-        padding: 10px 15px;
-        background-color:midnightblue;
-        color: whitesmoke;
-        border-radius: 5px;
-        font-size: 1.1em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border-width: 0;
-        
-    }
-
-    .contactItem{
-        padding-bottom: 5px;
-        font-size: 1.2em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        margin-top: 10px;
-        clear: both;
-    }
-    
-
-    .label{
-        float: left;
-        width: 25%;
-        margin-top: 5px;
-    }
-
-    .element{
-        float:right;
-        width: 75%;
-        margin-top: 5px;
-        
-    }
-	/*
     footer{  
 
-        display: block;
-        background-color:lightblue;
+    display: block;
+    background-color:lightblue;
+    width: 100%;
+    height: 120px;
+    color: white;
+    margin-top: 70px;  
+
+    /* position: fixed; */
+    left: 0;
+    bottom: 0; 
+    text-align: center;      
+    }
+
+    .foot{
+        float: left;
+        width: 31%;
+        text-decoration: none;
+        text-align: left;
+        font-size: 0.8em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        margin: 1%;
+    }
+
+    .copyright{
         width: 100%;
-        height: 100px;
-        color: white;
-        margin-top: 70px;  
-
-        position: fixed;
-        left: 0;
-        bottom: 0; 
-        text-align: center;      
-    }*/
-
-    
-
-    .main{
-        height: 480px;
-        margin-bottom: 50px;
+        text-decoration: none;
+        text-align: left;
+        clear: both;
+        color: black;
+        margin-top: 2%;
+        margin-left: 1%;
     }
 
 	</style>
-	
+	<link href="main.css" rel="stylesheet">
 </head>
 <body>
 	<header>
@@ -153,7 +100,7 @@
             <div>Southern University College</div>
             <div>PTD 64888 15km, Jalan Skudai,<br>81300, Skudai, Johor</div>
             <div>Phone: 07-5586605</div>
-            <div>
+            <div style="margin-top:5px">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.389068188619!2d103.68171967387698!3d1.5336577846265382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da73c109632e0b%3A0x74cda51bf210c304!2sSouthern+University+College!5e0!3m2!1sen!2smy!4v1556587412071!5m2!1sen!2smy" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
 
@@ -162,7 +109,20 @@
     </div>
     
 	<footer>
-        <a style="margin:20px" href="https://www.facebook.com/">FACEBOOK</a>
+        <div style="width:100%;">
+            <div class="foot"><strong>Who we are?</strong><br>We provids the online totorial for HTML, CSS and JavaScript. The tutorial suitable for beginer who didn't have any programming language basic.</div>
+            <div class="foot"><strong>Categories</strong> <br>HTML <br> CSS <br> JavaScript
+            </div>
+            <div class="foot">
+                <a style="margin:20px" href="https://www.facebook.com/"><img src="images/facebook.png" width="50" alt=""></a>
+                <a style="margin:20px" href="https://www.facebook.com/"><img src="images/instagram.png" width="50" alt=""></a>
+                <a style="margin:20px" href="https://www.facebook.com/"><img src="images/whatsapp.png" width="50" alt=""></a>
+            </div>
+        <div class="copyright">
+            
+            &copy; Copyright <strong>ABC company</strong>. All Rights Reserved
+            
+        </div>   
         
     </footer>
 	
