@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+	<title>My HTML Lesson</title>
+	<meta charset="utf-8">	
+	<style>
+	body{		
+        background-image: url(images/bg.jpg);        
+		margin: 0;
+	}
+
+    footer{  
+
+    display: block;
+    background-color:lightblue;
+    width: 100%;
+    height: 120px;
+    color: white;
+    margin-top: 70px;  
+
+    /* position: fixed; */
+    left: 0;
+    bottom: 0; 
+    text-align: center;      
+    }
+
+    .foot{
+        float: left;
+        width: 31%;
+        text-decoration: none;
+        text-align: left;
+        font-size: 0.8em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        margin: 1%;
+    }
+
+    .copyright{
+        width: 100%;
+        text-decoration: none;
+        text-align: left;
+        clear: both;
+        color: black;
+        margin-top: 2%;
+        margin-left: 1%;
+    }
+
+	</style>
+	<link href="main.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<ul class="topnav">
+            <li><a href="index.html">Home</a></li>
+            
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Tutorial</a>
+                <div class="dropdown-content">
+                  <a href="myWeb.htm">HTML</a>
+                  <a href="#">CSS</a>
+                  <a href="#">JavaScript</a>
+                </div>
+            </li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+            <div style="float:right">
+                <input style="padding: 8px 16px;margin-top:6px" type="text" placeholder="search">
+                <input style="padding: 8px 16px;margin-top:6px;margin-right:50px; background-color:cornflowerblue; border-width:0;
+                color: whitesmoke;" type="submit" />
+            </div> 
+        </ul>        
+	</header>
+	<div class="main" style="text-align:center">
+        
+        <h1>CSS Tutorial</h1>
+        <table class="tbl" align="center">
+            <thead>
+                <tr>
+                    <td class="selector" style="background-color:cornflowerblue">CSS Selector</td>
+                    <td class="meaning" style="background-color:cornflowerblue">Meaning</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="selector">background-color</td>
+                    <td class="meaning">Assign the RGB colour to the html object</td>
+                </tr>
+                <tr>
+                    <td class="selector">background-color</td>
+                    <td class="meaning">Assign the RGB colour to the html object</td>
+                </tr>
+                <tr>
+                    <td class="selector">background-color</td>
+                    <td class="meaning">Assign the RGB colour to the html object</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>    
+    
+	<footer>
+        <div style="width:100%;">
+            <div class="foot"><strong>Who we are?</strong><br>We provids the online totorial for HTML, CSS and JavaScript. The tutorial suitable for beginer who didn't have any programming language basic.</div>
+            <div class="foot"><strong>Categories</strong> <br>HTML <br> CSS <br> JavaScript
+            </div>
+            <div class="foot">
+                <a style="margin:20px" href="https://www.facebook.com/"><img src="images/facebook.png" width="50" alt=""></a>
+                <a style="margin:20px" href="https://www.facebook.com/"><img src="images/instagram.png" width="50" alt=""></a>
+                <a style="margin:20px" href="https://www.facebook.com/"><img src="images/whatsapp.png" width="50" alt=""></a>
+            </div>
+        <div class="copyright">
+            
+            &copy; Copyright <strong>ABC company</strong>. All Rights Reserved
+            
+        </div>   
+        
+    </footer>
+	
+	
+	
+</body>
+
+
+</html>
+
+
