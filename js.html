@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+	<title>My HTML Lesson</title>
+	<meta charset="utf-8">	
+	<style>
+	body{		
+        background-image: url(images/bg.jpg);        
+		margin: 0;
+	}
+
+    footer{  
+
+    display: block;
+    background-color:lightblue;
+    width: 100%;
+    height: 120px;
+    color: white;
+    margin-top: 70px;  
+
+    /* position: fixed; */
+    left: 0;
+    bottom: 0; 
+    text-align: center;      
+    }
+
+    .foot{
+        float: left;
+        width: 31%;
+        text-decoration: none;
+        text-align: left;
+        font-size: 0.8em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        margin: 1%;
+    }
+
+    .copyright{
+        width: 100%;
+        text-decoration: none;
+        text-align: left;
+        clear: both;
+        color: black;
+        margin-top: 2%;
+        margin-left: 1%;
+    }
+
+	</style>
+    <link href="main.css" rel="stylesheet">
+    <script>
+        function copy(){
+            document.getElementById("value2").value=document.getElementById("value1").value;
+
+            var value1=parseInt(document.getElementById("value1").value);
+            var value2=parseInt(document.getElementById("value2").value);
+
+            var value3=value1+value2;
+            document.getElementById("value3").value=value3;
+        }
+        
+        function cal(){
+            var unitprice=parseInt(document.getElementById("unitprice").value);
+            var quantity=parseInt(document.getElementById("quantity").value);
+
+            var result=unitprice*quantity;
+            document.getElementById("result").value=result;
+        }
+    </script>
+</head>
+<body>
+	<header>
+		<ul class="topnav">
+            <li><a href="index.html">Home</a></li>
+            
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Tutorial</a>
+                <div class="dropdown-content">
+                  <a href="myWeb.htm">HTML</a>
+                  <a href="css.html">CSS</a>
+                  <a href="#">JavaScript</a>
+                </div>
+            </li>
+            
+            
+
+            <li><a href="contact.html">Contact Us</a></li>
+            <div style="float:right">
+                <input style="padding: 8px 16px;margin-top:6px" type="text" placeholder="search">
+                <input style="padding: 8px 16px;margin-top:6px;margin-right:50px; background-color:cornflowerblue; border-width:0;
+                color: whitesmoke;" type="submit" />
+            </div> 
+        </ul>
+        
+	</header>
+	<div class="main">
+        
+        <div class="contact">
+            <h1>JavaScript Functions</h1>
+            <form action="contactUs.php" method="POST">
+                <div class="contactItem">
+                    <div class="label">Value 1</div>
+                    <div class="element"><input type="text" id="value1" name="name" value="" size="30"></div> 
+                </div>
+                <div class="contactItem">
+                        <div class="label">Value 2</div>
+                        <div class="element"><input type="email" id="value2" name="email" value="" size="30"></div> 
+                </div>
+                <div class="contactItem">
+                        <div class="label">Result</div>
+                        <div class="element"><input type="email" id="value3" name="email" value="" size="30"></div> 
+                </div>                
+                <div class="contactItem">
+                    <div class="element"><input type="button" value="Copy" onclick="copy()"></div>
+                </div>                
+            </form>
+        </div>
+        <div class="contact">
+                <h1>JavaScript Calculation</h1>
+                <form action="contactUs.php" method="POST">
+                    <div class="contactItem">
+                        <div class="label">Unit Price</div>
+                        <div class="element"><input type="text" id="unitprice" name="name" value="" size="30"></div> 
+                    </div>
+                    <div class="contactItem">
+                            <div class="label">Quantity</div>
+                            <div class="element"><input type="email" id="quantity" name="email" value="" size="30" onchange="cal()"></div> 
+                    </div>
+                    <div class="contactItem">
+                            <div class="label">Result</div>
+                            <div class="element"><input type="email" id="result" name="email" value="" size="30" readonly></div> 
+                    </div>                
+                                   
+                </form>
+        </div>
+        
+    </div>
+    
+	<footer>
+        <div style="width:100%;">
+            <div class="foot"><strong>Who we are?</strong><br>We provids the online totorial for HTML, CSS and JavaScript. The tutorial suitable for beginer who didn't have any programming language basic.</div>
+            <div class="foot"><strong>Categories</strong> <br>HTML <br> CSS <br> JavaScript
+            </div>
+            <div class="foot">
+                <a style="margin:20px" href="https://www.facebook.com/"><img src="images/facebook.png" width="50" alt=""></a>
+                <a style="margin:20px" href="https://www.facebook.com/"><img src="images/instagram.png" width="50" alt=""></a>
+                <a style="margin:20px" href="https://www.facebook.com/"><img src="images/whatsapp.png" width="50" alt=""></a>
+            </div>
+        <div class="copyright">
+            
+            &copy; Copyright <strong>ABC company</strong>. All Rights Reserved
+            
+        </div>   
+        
+    </footer>
+	
+	
+	
+</body>
+
+
+</html>
+
+
