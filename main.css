@@ -74,10 +74,12 @@ ul.topnav li a {
 .contact input[type="text"],input[type="email"],input[type="tel"],select{
     padding: 8px;
     font-size: 1.1em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
 }
+
+
+
+
 
 .contact input[type="submit"]{
     padding: 10px 15px;
