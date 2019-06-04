@@ -62,6 +62,27 @@
 	</style>
     <link href="main.css" rel="stylesheet">
     <script>
+
+        var text="";
+        var i;
+
+        for(i=0;i<5;i++){
+            text+="The number is "+i+"\n";            
+        }
+        console.log(text);
+        
+        function calOdd(){
+            var i;
+            var total=0;
+            var fromNo=parseInt(document.getElementById("fromNo").value);
+            var toNo=parseInt(document.getElementById("toNo").value);
+            for(i=fromNo;i<=toNo;i++){
+                total=total+i;
+                i++;            
+            }
+            document.getElementById("totalResult").value=total;
+        }
+
         function copy(){
             document.getElementById("value2").value=document.getElementById("value1").value;
 
@@ -131,7 +152,7 @@
         </ul>
         
 	</header>
-	<div class="main" style="height: 550px">
+	<div class="main" style="height: 750px">
         
         <div class="contact" style="height:280px">
             <h1>JavaScript Functions</h1>
@@ -213,7 +234,11 @@
                 </tr>
             </table>
         </div>
-        
+        <div style="width: 100%;margin-top: 20px" align="center" class="js">
+            Number From <input type="text" id="fromNo" size="5"> to <input type="text" id="toNo" size="5"> <input type="button" name="cal" id="cal" value="Calculate Total" onclick="calOdd()"> <br>
+            Result <input type="text" id="totalResult" >    
+        </div>
+
     </div>
 
 
