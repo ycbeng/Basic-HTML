@@ -76,12 +76,32 @@
             var total=0;
             var fromNo=parseInt(document.getElementById("fromNo").value);
             var toNo=parseInt(document.getElementById("toNo").value);
-            for(i=fromNo;i<=toNo;i++){
-                total=total+i;
-                i++;            
+        if(fromNo>=1&&toNo>=1&&fromNo<toNo){
+            if(fromNo%2!=0){ //for odd number
+                document.getElementById("numberType").innerHTML="The first number is odd number.";
+
+                for(i=fromNo;i<=toNo;i++){
+                    total=total+i;
+                    i++;            
+                }
+                document.getElementById("totalResult").value=total;
             }
-            document.getElementById("totalResult").value=total;
-        }
+            else{ //even number
+                document.getElementById("numberType").innerHTML="The first number is even number.";
+
+                fromNo++;
+                for(i=fromNo;i<=toNo;i++){
+                    total=total+i;
+                    i++;            
+                }
+                document.getElementById("totalResult").value=total;
+            }
+
+        }//end if  
+        else{
+            alert("Allow positive number only");
+        }  
+        }//end function
 
         function copy(){
             document.getElementById("value2").value=document.getElementById("value1").value;
@@ -236,7 +256,10 @@
         </div>
         <div style="width: 100%;margin-top: 20px" align="center" class="js">
             Number From <input type="text" id="fromNo" size="5"> to <input type="text" id="toNo" size="5"> <input type="button" name="cal" id="cal" value="Calculate Total" onclick="calOdd()"> <br>
-            Result <input type="text" id="totalResult" >    
+            Result <input type="text" id="totalResult" > 
+            
+            <p id="numberType">&nbsp;</p>
+            
         </div>
 
     </div>
