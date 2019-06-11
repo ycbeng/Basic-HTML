@@ -121,18 +121,30 @@
             document.getElementById("result").value=result;
         }
 
-        function total(){
-            var U1=parseFloat(document.getElementById("UnitPrice1").value);
-            var Q1=parseFloat(document.getElementById("Quantity1").value);
-            var r1=U1*Q1;
-            document.getElementById("subtotal1").value=r1;
+        function total(){         
 
-            var U2=parseFloat(document.getElementById("UnitPrice2").value);
-            var Q2=parseFloat(document.getElementById("Quantity2").value);
-            var r2=U2*Q2;
-            document.getElementById("subtotal2").value=r2;
+            
+    
+    var subtotal=0;
+    var tax=0;
+    var total=0;
+    var cboxes = document.getElementsByName('item[]');
+    var unitprice= document.getElementsByName('UnitPrice[]');
+    var quantity= document.getElementsByName('Quantity[]');    
+	var len = cboxes.length;//get number of checkbox	    
+	for (var i=0; i<len; i++) {        
+		if(cboxes[i].checked){	//calculate if checked
 
-            var subtotal=r1+r2;
+            var U=parseFloat(unitprice[i].value);
+            var Q=parseFloat(quantity[i].value);
+            var r=U*Q;            
+            document.getElementsByName("sub[i]").value=r;
+            subtotal=subtotal+r;	
+        }					
+	}
+
+    document.getElementsByName("sub[0]").value=99;
+            //var subtotal=r1+r2;
             var tax=subtotal*0.05;
             tax=tax.toFixed(2);
 
@@ -223,16 +235,18 @@
                     <td class="col-width">Subtotal</td>
                 </tr>
                 <tr>
-                    <td class="col-width">Item 1</td>
-                    <td><input type="text" id="UnitPrice1"></td>
-                    <td><input type="text" id="Quantity1" onchange="total()"></td>
-                    <td><input type="text" id="subtotal1"></td>
+                    <td class="col-width">
+                        <input type="checkbox" name="item[]" value="" /> Item 1
+                    </td>
+                    <td><input type="text" id="UnitPrice[]" name="UnitPrice[]"></td>
+                    <td><input type="text" id="Quantity[]" name="Quantity[]"onchange="total()"></td>
+                    <td><input type="text" id="sub[]" name="sub[]"></td>
                 </tr>
                 <tr>
-                    <td class="col-width">Item 2</td>
-                    <td><input type="text" id="UnitPrice2"></td>
-                    <td><input type="text" id="Quantity2" onchange="total()"></td>
-                    <td><input type="text" id="subtotal2"></td>
+                    <td class="col-width"><input type="checkbox" name="item[]" value="" />Item 2</td>
+                    <td><input type="text" id="UnitPrice[]" name="UnitPrice[]"></td>
+                    <td><input type="text" id="Quantity[]" name="Quantity[]"onchange="total()"></td>
+                    <td><input type="text" id="sub[]" name="sub[]"></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
