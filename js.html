@@ -138,7 +138,7 @@
             var U=parseFloat(unitprice[i].value);
             var Q=parseFloat(quantity[i].value);
             var r=U*Q;            
-            document.getElementsByName("sub[i]").value=r;
+            document.getElementsByName('subtotal[]')[i].value=r;
             subtotal=subtotal+r;	
         }					
 	}
@@ -240,13 +240,13 @@
                     </td>
                     <td><input type="text" id="UnitPrice[]" name="UnitPrice[]"></td>
                     <td><input type="text" id="Quantity[]" name="Quantity[]"onchange="total()"></td>
-                    <td><input type="text" id="sub[]" name="sub[]"></td>
+                    <td><input type="text" id="subtotal[]" name="subtotal[]"></td>
                 </tr>
                 <tr>
                     <td class="col-width"><input type="checkbox" name="item[]" value="" />Item 2</td>
                     <td><input type="text" id="UnitPrice[]" name="UnitPrice[]"></td>
                     <td><input type="text" id="Quantity[]" name="Quantity[]"onchange="total()"></td>
-                    <td><input type="text" id="sub[]" name="sub[]"></td>
+                    <td><input type="text" id="subtotal[]" name="subtotal[]"></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
