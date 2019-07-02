@@ -1,0 +1,179 @@
+
+<html lang="en">
+    <head>
+        <title>My HTML Lesson</title>
+        <meta charset="utf-8">	
+        <style>
+        body{		
+            background-image: url(images/bg.jpg);        
+            margin: 0;
+        }
+    
+        footer{  
+    
+        display: block;
+        background-color:lightblue;
+        width: 100%;
+        height: 120px;
+        color: white;
+        margin-top: 70px;  
+    
+        /* position: fixed; */
+        left: 0;
+        bottom: 0; 
+        text-align: center;      
+        }
+    
+        .foot{
+            float: left;
+            width: 31%;
+            text-decoration: none;
+            text-align: left;
+            font-size: 0.8em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            margin: 1%;
+        }
+    
+        .copyright{
+            width: 100%;
+            text-decoration: none;
+            text-align: left;
+            clear: both;
+            color: black;
+            margin-top: 2%;
+            margin-left: 1%;
+        }
+    
+        .js input[type="text"]{
+        padding: 8px;
+        font-size: 1.1em;
+        
+        font-family: Verdana, Geneva, Tahoma, sans-serif;    
+        }
+    
+        input[type="button"]{
+        padding: 10px 15px;
+        background-color:midnightblue;
+        color: whitesmoke;
+        border-radius: 5px;
+        font-size: 1.1em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-width: 0;    
+        }
+    
+        .col-width{
+            width: 150px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+    
+    
+    
+        </style>
+        <link href="main.css" rel="stylesheet">
+        <script>
+     
+            function cal(){
+                
+                    document.getElementsByName('number[]')[3].value=parseFloat(document.getElementsByName('number[]')[6].value)+parseFloat(document.getElementsByName('number[]')[7].value);
+                    
+                    document.getElementsByName('number[]')[4].value=parseInt(document.getElementsByName('number[]')[7].value)+parseInt(document.getElementsByName('number[]')[8].value);
+
+                    document.getElementsByName('number[]')[5].value=parseInt(document.getElementsByName('number[]')[8].value)+parseInt(document.getElementsByName('number[]')[9].value);
+
+                    document.getElementsByName('number[]')[1].value=parseInt(document.getElementsByName('number[]')[3].value)+parseInt(document.getElementsByName('number[]')[4].value);
+
+                    document.getElementsByName('number[]')[2].value=parseInt(document.getElementsByName('number[]')[4].value)+parseInt(document.getElementsByName('number[]')[5].value);
+
+                    document.getElementsByName('number[]')[0].value=parseInt(document.getElementsByName('number[]')[1].value)+parseInt(document.getElementsByName('number[]')[2].value);
+
+                    
+                
+            }//end function
+    
+            
+        </script>
+    </head>
+    <body>
+        <header>
+            <ul class="topnav">
+                <li><a href="index.html">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Tutorial</a>
+                    <div class="dropdown-content">
+                      <a href="myWeb.htm">HTML</a>
+                      <a href="css.html">CSS</a>
+                      <a href="#">JavaScript</a>
+                    </div>
+                </li>
+                
+                
+    
+                <li><a href="contact.html">Contact Us</a></li>
+                <div style="float:right">
+                    <input style="padding: 8px 16px;margin-top:6px" type="text" placeholder="search">
+                    <input style="padding: 8px 16px;margin-top:6px;margin-right:50px; background-color:cornflowerblue; border-width:0;
+                    color: whitesmoke;" type="submit" />
+                </div> 
+            </ul>
+            
+        </header>
+        <div class="main" style="height: 750px">
+            
+            <div style="width: 100%;margin-top: 20px" align="center" class="js">
+                <h2>Assignment</h5>
+                
+                <div>
+                    <input type="text" id="number[]" name="number[]" size="5">
+                </div>
+                <div>
+                    <input type="text" id="number[]" name="number[]" size="5"> 
+                    <input type="text" id="number[]" name="number[]" size="5"> 
+                </div>
+                <div>
+                    <input type="text" id="number[]" name="number[]" size="5"> 
+                    <input type="text" id="number[]" name="number[]" size="5"> 
+                    <input type="text" id="number[]" name="number[]" size="5"> 
+                </div>
+                <div>
+                    <input type="text" id="number[]" name="number[]" size="5" onchange="cal()">
+                    <input type="text" id="number[]" name="number[]" size="5" onchange="cal()">
+                    <input type="text" id="number[]" name="number[]" size="5" onchange="cal()">
+                    <input type="text" id="number[]" name="number[]" size="5" onchange="cal()"> 
+                </div>
+                      
+            </div>
+    
+        </div>
+    
+    
+        
+        <footer>
+            <div style="width:100%;">
+                <div class="foot"><strong>Who we are?</strong><br>We provids the online totorial for HTML, CSS and JavaScript. The tutorial suitable for beginer who didn't have any programming language basic.</div>
+                <div class="foot"><strong>Categories</strong> <br>HTML <br> CSS <br> JavaScript
+                </div>
+                <div class="foot">
+                    <a style="margin:20px" href="https://www.facebook.com/"><img src="images/facebook.png" width="50" alt=""></a>
+                    <a style="margin:20px" href="https://www.facebook.com/"><img src="images/instagram.png" width="50" alt=""></a>
+                    <a style="margin:20px" href="https://www.facebook.com/"><img src="images/whatsapp.png" width="50" alt=""></a>
+                </div>
+            <div class="copyright">
+                
+                &copy; Copyright <strong>ABC company</strong>. All Rights Reserved
+                
+            </div>   
+            
+        </footer>
+        
+        
+        
+    </body>
+    
+    
+    </html>
+    
+    
+    
