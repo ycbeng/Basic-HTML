@@ -287,12 +287,69 @@
             <p id="numberType">&nbsp;</p>
             
         </div>
+<script>
+     function prime(){
+            var primeNumber="";
+            var primeFrom=parseInt(document.getElementById("primeFrom").value);
+            var primeTo=parseInt(document.getElementById("primeTo").value);
+
+            for (var i=primeFrom;i<=primeTo;i++) {
+	    	    var counter = 0;
+                if(i>7){
+                    if(i%2==0){
+                        counter = 0;
+                        
+                    }else if(i%3==0){
+                        counter = 0;
+                        
+                    }else if(i%5==0){
+                        counter = 0;
+                        
+                    }else if(i%7==0){
+                        counter = 0;
+                        
+                    }else{
+                        counter = 2;
+                        primeNumber=primeNumber+i+" is prime number.<br>";
+                    }
+                }	
+                else{
+                    if(i==1){
+                        counter = 0;
+                        
+                    }
+                    else if(i==2){
+                        counter = 2;
+                        primeNumber=primeNumber+" 2 is prime number.<br>";
+                    }
+                    else if(i==3){
+                        counter = 2;
+                        primeNumber=primeNumber+" 3 is prime number.<br>";
+                    }
+                    else if(i==5){
+                        counter = 2;
+                        primeNumber=primeNumber+" 5 is prime number.<br>";
+                    }
+                    else if(i==7){
+                        counter = 2;
+                        primeNumber=primeNumber+=" 7 is prime number.<br>";
+                    }
+                }
+            }
+            document.getElementById("PrimeNumber").innerHTML=primeNumber;
+        }
+</script>
+        <div style="width: 100%;margin-top: 20px" align="center" class="js"> 
+            Prime Number<input type="text" id="primeFrom" size="5"> to <input type="text" id="primeTo" size="5"> <input type="button" name="cal"  value="Calculate Prime Number" onclick="prime()"> <br>           
+            
+            <p id="PrimeNumber">&nbsp;</p>            
+        </div>
 
     </div>
 
 
     
-	<footer>
+	<footer style="margin-top: 250px">
         <div style="width:100%;">
             <div class="foot"><strong>Who we are?</strong><br>We provids the online totorial for HTML, CSS and JavaScript. The tutorial suitable for beginer who didn't have any programming language basic.</div>
             <div class="foot"><strong>Categories</strong> <br>HTML <br> CSS <br> JavaScript
